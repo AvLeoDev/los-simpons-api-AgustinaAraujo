@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Merriweather:wght@300&display=swap');
+
+@font-face {
+    font-family: 'Simpsonfont';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Simpsonfont'), url('Simpsonfont.woff') format('woff');
+    }
+
+body {
+    background: #ffd521;
+    align-items: center;
+}
+ h1{
+    text-align: center;
+    color: #205bfe;
+    border: black;
+    font-size: 7vh;
+ }
+
+ #titulo {
+    font-family:'Simpsonfont';
+    font-weight: normal;
+    font-size: 50px;
+    margin: 30px auto;
+ }
+
+.sonido {
+    text-align: center;
+    margin: 0 auto 60px auto;
+}
+#card-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    width: auto;
+    justify-content: center;
+}
+.card {
+    --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
+    width: 190px;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 1rem;
+    overflow: visible;
+    background: #f7ba2b;
+    background: var(--background);
+    position: relative;
+    z-index: 1;
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    margin: 10px;
+   }
+
+   .card::after {
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    transform: scale(0.8);
+    filter: blur(25px);
+    background: #f7ba2b;
+    background: var(--background);
+    transition: opacity .5s;
+   }
+
+   .card-info {
+    --color: #181818;
+    background: var(--color);
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 97%;
+    overflow: visible;
+    border-radius: .7rem;
+    flex-direction: column;
+    padding: 10px;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 14px;
+   } 
+
+   .card-info img {
+    padding: 10px;
+   }
+
+   .card .title {
+    font-weight: bold;
+    letter-spacing: .1em;
+   }
+
+   /*Hover*/
+   .card:hover::after {
+    opacity: 0;
+   }
+
+   .card:hover .card-info {
+    color: #f7ba2b;
+    transition: color 1s;
+   }
+
+.button-27 {
+  appearance: none;
+  background-color: #181818;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 15px;
+  font-weight: 600;
+  line-height: normal;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100px;
+  will-change: transform;
+}
+
+.button-27:disabled {
+  pointer-events: none;
+}
+
+.button-27:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-27:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
